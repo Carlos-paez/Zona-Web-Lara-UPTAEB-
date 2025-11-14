@@ -1,8 +1,33 @@
+/*
+ * Zona Web Lara - Estilos Modernizados y Estéticos
+ * Inspirado en un diseño minimalista y moderno con un toque vibrante.
+ */
+
+:root {
+  /* Paleta de Colores */
+  --color-primary: #007bff; /* Azul vibrante (manteniendo la identidad) */
+  --color-secondary: #0056b3; /* Azul oscuro para hover */
+  --color-dark: #333333; /* Texto principal */
+  --color-light: #f4f7f6; /* Fondo suave para main */
+  --color-background: #ffffff; /* Fondo blanco para tarjetas y containers */
+  --color-accent: #28a745; /* Verde para acentos o botones clave (opcional) */
+  --color-shadow: rgba(0, 0, 0, 0.1);
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: rgb(205, 205, 205); /* Color base del body del style.css original */
-  color: #333;
+  /* Fuente moderna y limpia */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  line-height: 1.6;
+}
+
+/* --- Globales y Contenedores --- */
+
+main {
+  padding: 20px;
+  min-height: 70vh; /* Aumentado para un mejor aspecto */
 }
 
 /* --- Estilos de Encabezado y Navegación (Header & Nav) --- */
@@ -12,12 +37,21 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  height: 120px;
-  border: 5px solid black;
-  background-image: url("banner.jpg"); /* Imagen de banner de fondo */
-  background-size: cover;
-  background-position: center;
+  margin-top: 0;
+  height: 150px;
+  border: none;
+  /* --- CAMBIO AQUI: Degradado para el banner --- */
+  background: linear-gradient(
+    to right,
+    #007bff,
+    #b3e0ff
+  ); /* Degradado de azul a azul más claro/blanco */
+  /* Si deseas mantener una imagen de fondo sutil detrás del gradiente, puedes usar esto: */
+  /* background: linear-gradient(to right, rgba(0, 123, 255, 0.8), rgba(179, 224, 255, 0.8)), url("banner.jpg"); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* background-blend-mode: multiply; /* Para que la imagen se fusione con el gradiente */
+  box-shadow: 0 4px 10px var(--color-shadow);
 }
 
 header .logo {
@@ -25,6 +59,10 @@ header .logo {
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
+  background-color: var(--color-background);
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 0 15px var(--color-shadow);
 }
 
 header .logo img {
@@ -32,144 +70,215 @@ header .logo img {
   width: 100px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid black;
+  border: 3px solid var(--color-primary);
+  transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+  transform: scale(1.05);
 }
 
 header h1 {
   margin: 0;
-  font-size: 35px;
-  font-family: sans-serif;
-  color: #007bff; /* Color azul usado en el style.css original */
-  -webkit-text-stroke: 1px #000;
+  font-size: 40px;
+  color: var(--color-background);
+  text-shadow: 2px 2px 5px var(--color-dark);
   padding: 15px 10px;
+  font-weight: 700;
 }
 
 nav {
-  background-color: #333;
-  padding: 10px 0;
+  background-color: var(--color-dark);
+  padding: 12px 0;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--color-shadow);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
 nav a {
-  color: white;
+  color: var(--color-light);
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 12px 20px;
   margin: 0 5px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-  font-weight: bold;
+  border-radius: 50px;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 nav a:hover {
-  background-color: #007bff;
-}
-
-/* --- Estilos Generales de Contenido (Main Content) --- */
-
-main {
-  padding: 20px;
-  min-height: 60vh;
+  background-color: var(--color-primary);
+  color: var(--color-background);
 }
 
 /* --- Estilos para la Página Principal (index.html) --- */
 
 .main-menu-container {
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-background);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px var(--color-shadow);
 }
 
-.menu-button {
-  width: 100%;
-  background-color: #007bff;
-  border: 2px solid #fff;
-  border-radius: 25px;
-  padding: 15px 0;
-  margin: 15px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  font-size: 1.3em;
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  font-weight: bold;
-  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+.logo-text {
+  margin: 5px 0;
 }
 
-.menu-button:hover {
-  background-color: #0056b3;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+.logo-text:first-of-type {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+.main-menu-container h2 {
+  font-size: 3em !important;
+  color: var(--color-primary) !important;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.logo-subtext {
+  font-size: 1.1em;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Sección de contenido en index.html */
+.content-section {
+  margin-top: 30px;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+}
+
+.content-section h3 {
+  color: var(--color-dark);
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  border-bottom: 3px solid var(--color-primary);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.ciber-section {
+  background-color: var(--color-light);
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.ciber-section h3 {
+  color: var(--color-primary) !important;
+  border-bottom: none;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.ciber-section h4 {
+  color: var(--color-dark);
+  margin-top: 20px;
+  font-size: 1.2em;
+  border-left: 5px solid var(--color-primary);
+  padding-left: 10px;
+}
+
+.ciber-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.ciber-section li {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%23007bff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>')
+    no-repeat left center;
+  background-size: 16px;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 
 /* --- Estilos para la Página de Historial (historial.html) --- */
 
 .container-historial {
-  max-width: 800px;
+  max-width: 900px;
   margin: 30px auto;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background-color: var(--color-background);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px var(--color-shadow);
   text-align: left;
 }
 
 .titulo-principal-historial {
-  font-family: 'Times New Roman', serif;
-  font-size: 2.5em;
-  color: #000080; /* Azul Marino */
+  font-family: "Georgia", serif;
+  font-size: 2.8em;
+  color: var(--color-secondary);
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.container-historial p {
+  margin-bottom: 1.5em;
+  text-align: justify;
+}
+
+.container-historial p strong {
+  color: var(--color-primary);
 }
 
 .historial-footer-img {
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
 }
 
 .historial-footer-img img {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   height: auto;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--color-shadow);
 }
 
 /* --- Estilos para la Galería (galeria.html) --- */
 
 .galeria {
   text-align: center;
-  margin: 20px auto;
-  max-width: 1000px;
+  margin: 30px auto;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
 .galeria h2 {
-    color: #007bff;
-    font-size: 2em;
-    margin-bottom: 20px;
+  color: var(--color-primary);
+  font-size: 3em;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .imagen-rotando-3d {
   display: flex;
   justify-content: center;
   margin-top: 15px;
-  perspective: 5000px;
+  margin-bottom: 40px;
+  perspective: 1000px;
 }
 
 .imagen-rotando-3d img {
-  width: 200px;
-  height: 200px;
-  border: 3px solid black;
+  width: 250px;
+  height: 250px;
+  border: 5px solid var(--color-primary);
+  border-radius: 50%;
   object-fit: cover;
-  animation: girar3d 5s linear infinite;
+  animation: girar3d 10s linear infinite;
   transform-style: preserve-3d;
+  box-shadow: 0 10px 20px var(--color-shadow);
 }
 
 @keyframes girar3d {
@@ -183,96 +292,125 @@ main {
 
 .grid-galeria {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0;
 }
 
 .grid-galeria img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px var(--color-shadow);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s;
 }
 
 .grid-galeria img:hover {
-    transform: scale(1.05);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* --- Estilos para la Página de Contacto (contacto.html) --- */
 
 .content-wrap-contacto {
   width: 90%;
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--color-background);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px var(--color-shadow);
 }
 
 .content-wrap-contacto h1 {
-  color: #2196F3;
+  color: var(--color-primary);
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
+  font-size: 2.5em;
+}
+
+.content-wrap-contacto p {
+  font-size: 1.1em;
+  color: #666;
+}
+
+.form-contacto {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
 }
 
 .form-contacto .input-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .form-contacto label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--color-dark);
 }
 
 .form-contacto input[type="text"],
 .form-contacto input[type="email"],
 .form-contacto textarea {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
   box-sizing: border-box;
   font-size: 1em;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
 }
 
 .form-contacto textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 120px;
 }
 
 .form-contacto button[type="submit"] {
-  background-color: #2196F3;
+  background-color: var(--color-primary);
   color: white;
-  padding: 10px 15px;
+  padding: 12px 15px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1.1em;
+  font-weight: 600;
   width: 100%;
-  margin-top: 10px;
-  transition: background-color 0.3s;
+  margin-top: 15px;
+  transition: background-color 0.3s, transform 0.1s;
 }
 
 .form-contacto button[type="submit"]:hover {
-  background-color: #1976D2;
+  background-color: var(--color-secondary);
+  transform: translateY(-1px);
 }
 
 .info-card {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  background-color: var(--color-light);
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
 .info-card h2 {
-  color: #2196F3;
+  color: var(--color-primary);
   text-align: center;
   margin-top: 0;
+  border-bottom: 2px solid var(--color-secondary);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .contact-grid {
@@ -284,44 +422,84 @@ main {
 }
 
 .contact-grid > div {
-    margin: 10px;
+  margin: 15px 10px;
+  padding: 10px;
+  min-width: 40%;
 }
 
 .contact-grid p {
   font-weight: bold;
-  color: #555;
+  color: var(--color-primary);
   margin-bottom: 5px;
+  font-size: 1.1em;
 }
 
 .contact-grid .value {
   display: block;
-  font-size: 1.1em;
-  color: #333;
+  font-size: 1.2em;
+  color: var(--color-dark);
 }
 
 .social-links {
-    text-align: center;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .social-links a {
-  color: #2196F3;
+  color: var(--color-primary);
   text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-  transition: color 0.3s;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s, background-color 0.3s, padding 0.3s;
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 
 .social-links a:hover {
-  color: #1976D2;
+  color: var(--color-background);
+  background-color: var(--color-primary);
 }
-
 
 /* --- Estilos de Pie de Página (Footer) --- */
 
 footer {
-  background-color: #333;
-  color: white;
+  background-color: var(--color-dark);
+  color: var(--color-light);
   text-align: center;
-  padding: 15px 0;
-  margin-top: 30px;
+  padding: 20px 0;
+  margin-top: 50px;
+  font-size: 0.9em;
+}
+
+/* Media Queries para Responsive Design (Estética Moderna) */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 30px;
+  }
+  nav a {
+    padding: 10px 10px;
+    font-size: 0.9em;
+  }
+  .main-menu-container,
+  .container-historial,
+  .content-wrap-contacto {
+    padding: 15px;
+    margin: 20px auto;
+  }
+  .grid-galeria {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+  .grid-galeria img {
+    height: 150px;
+  }
+  .contact-grid {
+    flex-direction: column;
+  }
+  .contact-grid > div {
+    min-width: 90%;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
 }
