@@ -1,48 +1,221 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zona Web Lara - Historial</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
+    <!-- Bloque de Estilos CSS Integrado (Nuevo) -->
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: rgb(
+          205,
+          205,
+          205
+        ); /* Color base del body del style.css original */
+        color: #333;
+      }
+
+      /* --- Estilos de Encabezado y Navegación (Header & Nav) --- */
+
+      header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        height: 120px;
+        border: 5px solid black;
+        /* NOTA: Asegúrate de que 'banner.jpg' exista para que este fondo funcione */
+        background-image: url("banner.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      header .logo {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      header .logo img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid black;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 35px;
+        font-family: sans-serif;
+        color: #007bff; /* Color azul usado en el style.css original */
+        -webkit-text-stroke: 1px #000;
+        padding: 15px 10px;
+      }
+
+      nav {
+        background-color: #333;
+        padding: 10px 0;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        margin: 0 5px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        background-color: #007bff;
+      }
+
+      /* --- Estilos Generales de Contenido (Main Content) --- */
+
+      main {
+        padding: 20px;
+        min-height: 60vh;
+      }
+
+      /* --- Estilos para la Página de Historial (historial.html) --- */
+
+      .container-historial {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+
+      .titulo-principal-historial {
+        font-family: "Times New Roman", serif;
+        font-size: 2.5em;
+        color: #000080; /* Azul Marino */
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* Clase usada para centrar la imagen en este documento */
+      .historial-footer-img {
+        margin-top: 20px;
+        text-align: center; /* Centra la imagen */
+      }
+
+      .historial-footer-img img {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* --- Estilos de Pie de Página (Footer) --- */
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <img src="logo.jpg" alt="Logo">
-        </div>
-        <h1>Zona Web Lara</h1>
+      <div class="logo">
+        <!-- Asegúrate de tener 'logo.jpg' -->
+        <img src="logo.jpg" alt="Logo" />
+      </div>
+      <h1>Zona Web Lara</h1>
     </header>
 
     <nav>
-        <a href="index.html">Inicio</a>
-        <a href="historial.html">Historial</a>
-        <a href="galeria.html">Galería</a>
-        <a href="contacto.html">Contacto</a>
+      <a href="index.html">Inicio</a>
+      <a href="historial.html">Historial</a>
+      <a href="galeria.html">Galería</a>
+      <a href="contacto.html">Contacto</a>
     </nav>
 
     <main>
-        <div class="container-historial">
-            <h2 class="titulo-principal-historial">Nuestra Historia</h2>
-            
-            <p>La historia de **Zona Web Lara, C.A.** es la narración de una visión que se materializó en el corazón de Pavía, Barquisimeto, Estado Lara, el 25 de octubre de 2023. Desde sus inicios, la empresa se propuso ser más que una simple tienda, adoptando un concepto innovador que combinaba la venta de útiles con servicios tecnológicos, buscaba brindar comodidad y soluciones prácticas a sus clientes y demostrando ser una fórmula acertada desde sus primeros pasos.</p>
-            
-            <p>Lo que comenzó como una iniciativa local pronto se convirtió en un punto de referencia gracias a la constancia y la dedicación de su equipo. A lo largo de los años, Zona Web Lara ha crecido y evolucionado, adaptando su oferta para satisfacer las necesidades cambiantes de sus clientes y adaptarse a las nuevas tendencias del mercado.</p>
-            
-            <p>El crecimiento de la empresa se ha basado en la calidad de sus productos, la eficiencia de sus servicios y, sobre todo, en la atención personalizada. La capacidad de escuchar y responder a las demandas de la comunidad ha sido clave para establecer relaciones duraderas de confianza y fidelidad.</p>
-            
-            <p>El enfoque centrado en el cliente, sumado a la calidad de nuestros productos y servicios, ha sido fundamental para el crecimiento sostenido de la empresa. Hoy en día, Zona Web Lara, C.A. se enorgullece de contar con una base de más de 5000 clientes, un testimonio elocuente de la confianza y la fidelidad que ha logrado construir a lo largo de su trayectoria.</p>
-            
-            <p>Alcanzar esta significativa cifra de clientes no es solo un número, sino el reflejo de un compromiso continuo con la excelencia, la atención personalizada y la capacidad de evolucionar en un entorno dinámico. La empresa ha sabido mantenerse relevante, adaptándose a los avances tecnológicos y a las nuevas demandas del mercado, sin perder de vista la calidad y la eficiencia en cada interacción.</p>
-            
-            <p>La empresa mira hacia el futuro con el objetivo de seguir siendo un aliado estratégico para todos aquellos que buscan soluciones integrales en artículos escolares y de oficina, servicios de impresión e internet en Pavía.</p>
-        </div>
+      <div class="container-historial">
+        <h2 class="titulo-principal-historial">Nuestra Historia</h2>
+
+        <p>
+          La historia de **Zona Web Lara, C.A.** es la narración de una visión
+          que se materializó en el corazón de Pavía, Barquisimeto, Estado Lara,
+          el 25 de octubre de 2023. Desde sus inicios, la empresa se propuso ser
+          más que una simple tienda, adoptando un concepto innovador que
+          combinaba la venta de útiles con servicios tecnológicos, buscaba
+          brindar comodidad y soluciones prácticas a sus clientes y demostrando
+          ser una fórmula acertada desde sus primeros pasos.
+        </p>
+
+        <p>
+          Lo que comenzó como una iniciativa local pronto se convirtió en un
+          punto de referencia gracias a la constancia y la dedicación de su
+          equipo. A lo largo de los años, Zona Web Lara ha crecido y
+          evolucionado, adaptando su oferta para satisfacer las necesidades
+          cambiantes de sus clientes y adaptarse a las nuevas tendencias del
+          mercado.
+        </p>
+
+        <p>
+          El crecimiento de la empresa se ha basado en la calidad de sus
+          productos, la eficiencia de sus servicios y, sobre todo, en la
+          atención personalizada. La capacidad de escuchar y responder a las
+          demandas de la comunidad ha sido clave para establecer relaciones
+          duraderas de confianza y fidelidad.
+        </p>
+
+        <p>
+          El enfoque centrado en el cliente, sumado a la calidad de nuestros
+          productos y servicios, ha sido fundamental para el crecimiento
+          sostenido de la empresa. Hoy en día, Zona Web Lara, C.A. se
+          enorgullece de contar con una base de más de 5000 clientes, un
+          testimonio elocuente de la confianza y la fidelidad que ha logrado
+          construir a lo largo de su trayectoria.
+        </p>
+
+        <p>
+          Alcanzar esta significativa cifra de clientes no es solo un número,
+          sino el reflejo de un compromiso continuo con la excelencia, la
+          atención personalizada y la capacidad de evolucionar en un entorno
+          dinámico. La empresa ha sabido mantenerse relevante, adaptándose a los
+          avances tecnológicos y a las nuevas demandas del mercado, sin perder
+          de vista la calidad y la eficiencia en cada interacción.
+        </p>
+
+        <p>
+          La empresa mira hacia el futuro con el objetivo de seguir siendo un
+          aliado estratégico para todos aquellos que buscan soluciones
+          integrales en artículos escolares y de oficina, servicios de impresión
+          e internet en Pavía.
+        </p>
+      </div>
+
+      <!-- Contenedor de la Imagen con la nueva clase para centrado y estilos -->
+      <div class="historial-footer-img">
+        <!-- Asegúrate de tener 'portada.jpg' -->
+        <img src="portada.jpg" alt="La Comunidad" width="800" height="300" />
+      </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Zona Web Lara. Todos los derechos reservados.</p>
+      <p>&copy; 2025 Zona Web Lara. Todos los derechos reservados.</p>
     </footer>
-
-</body>
+  </body>
 </html>
