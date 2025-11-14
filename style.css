@@ -310,7 +310,7 @@ nav a:hover {
 }
 
 .grid-galeria img:hover {
-  transform: translateY(-5px) scale(1.02);
+  transform: translateY(-5px) scale(2.05);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
