@@ -1,0 +1,327 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(205, 205, 205); /* Color base del body del style.css original */
+  color: #333;
+}
+
+/* --- Estilos de Encabezado y Navegación (Header & Nav) --- */
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  height: 120px;
+  border: 5px solid black;
+  background-image: url("banner.jpg"); /* Imagen de banner de fondo */
+  background-size: cover;
+  background-position: center;
+}
+
+header .logo {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header .logo img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid black;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 35px;
+  font-family: sans-serif;
+  color: #007bff; /* Color azul usado en el style.css original */
+  -webkit-text-stroke: 1px #000;
+  padding: 15px 10px;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #007bff;
+}
+
+/* --- Estilos Generales de Contenido (Main Content) --- */
+
+main {
+  padding: 20px;
+  min-height: 60vh;
+}
+
+/* --- Estilos para la Página Principal (index.html) --- */
+
+.main-menu-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu-button {
+  width: 100%;
+  background-color: #007bff;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  padding: 15px 0;
+  margin: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 1.3em;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.menu-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Estilos para la Página de Historial (historial.html) --- */
+
+.container-historial {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.titulo-principal-historial {
+  font-family: 'Times New Roman', serif;
+  font-size: 2.5em;
+  color: #000080; /* Azul Marino */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.historial-footer-img {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.historial-footer-img img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilos para la Galería (galeria.html) --- */
+
+.galeria {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.galeria h2 {
+    color: #007bff;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.imagen-rotando-3d {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  perspective: 5000px;
+}
+
+.imagen-rotando-3d img {
+  width: 200px;
+  height: 200px;
+  border: 3px solid black;
+  object-fit: cover;
+  animation: girar3d 5s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes girar3d {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.grid-galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.grid-galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Estilos para la Página de Contacto (contacto.html) --- */
+
+.content-wrap-contacto {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-wrap-contacto h1 {
+  color: #2196F3;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form-contacto .input-group {
+  margin-bottom: 15px;
+}
+
+.form-contacto label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-contacto input[type="text"],
+.form-contacto input[type="email"],
+.form-contacto textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.form-contacto textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-contacto button[type="submit"] {
+  background-color: #2196F3;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.form-contacto button[type="submit"]:hover {
+  background-color: #1976D2;
+}
+
+.info-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h2 {
+  color: #2196F3;
+  text-align: center;
+  margin-top: 0;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.contact-grid > div {
+    margin: 10px;
+}
+
+.contact-grid p {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.contact-grid .value {
+  display: block;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.social-links {
+    text-align: center;
+}
+
+.social-links a {
+  color: #2196F3;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #1976D2;
+}
+
+
+/* --- Estilos de Pie de Página (Footer) --- */
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
