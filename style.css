@@ -85,6 +85,7 @@ header h1 {
   text-shadow: 2px 2px 5px var(--color-dark);
   padding: 15px 10px;
   font-weight: 700;
+  margin-left: 80px;
 }
 
 nav {
