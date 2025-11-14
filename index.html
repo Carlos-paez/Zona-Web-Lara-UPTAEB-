@@ -5,6 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zona Web Lara - Inicio</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Estilos para la lista descriptiva mejorada */
+      .servicios-clave dl {
+        margin: 1.5em 0;
+        padding: 0 1em;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+      }
+
+      .servicios-clave dt {
+        font-weight: 700;
+        font-size: 1.1em;
+        color: #2c3e50;
+        margin-top: 1.2em;
+        margin-bottom: 0.4em;
+        padding-bottom: 0.2em;
+        border-bottom: 2px solid #3498db;
+        display: block;
+      }
+
+      .servicios-clave dd {
+        margin-left: 0;
+        margin-bottom: 1.2em;
+        color: #34495e;
+        padding-left: 0.5em;
+        border-left: 3px solid #bdc3c7;
+        background-color: #f9f9f9;
+        padding: 0.6em 1em;
+        border-radius: 0 6px 6px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Ajuste responsivo para pantallas pequeñas */
+      @media (max-width: 600px) {
+        .servicios-clave dl {
+          padding: 0 0.5em;
+        }
+
+        .servicios-clave dt {
+          font-size: 1em;
+        }
+
+        .servicios-clave dd {
+          padding: 0.5em;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -55,25 +102,38 @@
             cómodo y seguro, ideal para realizar tareas escolares, investigar,
             teletrabajar, o simplemente navegar.
           </p>
-          <h4>Servicios Clave del Ciber:</h4>
-          <ul>
-            <li>
-              Acceso a PCs de Escritorio: Equipos actualizados con los programas
-              esenciales para estudios y trabajo.
-            </li>
-            <li>
-              Impresión y Copiado: Servicio rápido y de calidad en blanco y
-              negro o a color, en diversos tamaños.
-            </li>
-            <li>
-              Escaneo de Documentos: Digitalización de documentos para envío por
-              correo o archivo.
-            </li>
-            <li>
-              Asistencia Técnica: Personal capacitado para ayudarte con tus
-              necesidades informáticas y de impresión.
-            </li>
-          </ul>
+
+          <h4 style="text-align: center; margin: 1.5em 0 1em">
+            Servicios Clave del Ciber:
+          </h4>
+
+          <div class="servicios-clave">
+            <dl>
+              <dt>Acceso a PCs de Escritorio</dt>
+              <dd>
+                Equipos actualizados con los programas esenciales para estudios
+                y trabajo.
+              </dd>
+
+              <dt>Impresión y Copiado</dt>
+              <dd>
+                Servicio rápido y de calidad en blanco y negro o a color, en
+                diversos tamaños.
+              </dd>
+
+              <dt>Escaneo de Documentos</dt>
+              <dd>
+                Digitalización de documentos para envío por correo o archivo.
+              </dd>
+
+              <dt>Asistencia Técnica</dt>
+              <dd>
+                Personal capacitado para ayudarte con tus necesidades
+                informáticas y de impresión.
+              </dd>
+            </dl>
+          </div>
+
           <p style="margin-top: 15px; text-align: center; font-style: italic">
             ¡Visítanos en Pavía, Barquisimeto, y aprovecha nuestras soluciones
             integrales!
